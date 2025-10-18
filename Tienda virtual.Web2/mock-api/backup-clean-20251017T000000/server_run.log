@@ -1,0 +1,5 @@
+✅ Conexión a MongoDB en memoria establecida (mongodb-memory-server)
+mock-api listening on http://localhost:3000
+SERVER_READY
+[0mGET /health [32m200[0m 3.696 ms - 15[0m
+[0mGET /api/usuarios [32m200[0m 7.936 ms - 2[0m

@@ -1,0 +1,5 @@
+.product-crud { padding: 1rem; }
+.product-crud .error { color: red; }
+.product-crud ul { list-style: none; padding: 0; }
+.product-crud li { margin: 0.25rem 0; }
+.product-crud input { margin-inline-end: 0.5rem; }

@@ -1,0 +1,21 @@
+<div class="product-crud">
+  <h2>Productos</h2>
+
+  <div *ngIf="(loading$ | async)">Cargando...</div>
+  <div *ngIf="(error$ | async) as err" class="error">{{ err }}</div>
+  <div *ngIf="(message$ | async) as msg" class="message">{{ msg }}</div>
+
+  <ul>
+    <li *ngFor="let p of (products$ | async)">
+      {{ p.name }} — {{ p.price | currency:'USD' }}
+      <button (click)="remove(p._id)">Eliminar</button>
+    </li>
+  </ul>
+
+  <h3>Crear producto</h3>
+  <form (ngSubmit)="add()">
+    <input type="text" placeholder="Nombre" [(ngModel)]="newName" name="name" required />
+    <input type="number" placeholder="Precio" [(ngModel)]="newPrice" name="price" required />
+    <button type="submit">Crear</button>
+  </form>
+</div>

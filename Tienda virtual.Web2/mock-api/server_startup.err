@@ -1,0 +1,7 @@
+uncaughtException: Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at app.listen (C:\Users\USR-79M2\Desktop\Tienda.virtual.Sam\Tienda virtual.Web2\mock-api\node_modules\express\lib\application.js:635:24)
+    at C:\Users\USR-79M2\Desktop\Tienda.virtual.Sam\Tienda virtual.Web2\mock-api\server.launch.js:51:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
