@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CFMall — Inspirado en la pasión por la motocicleta.</title>
+
+  <!-- Meta para SEO básico -->
+  <meta name="description" content="Tienda demo inspirada en CFMoto y Falabella. Motores, accesorios y financiamiento." />
+
+  <!-- Tipografías: puedes quitar o cambiar si no deseas Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="#" aria-label="Inicio">
+          <!-- simple logo svg -->
+          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
+            <rect width="24" height="24" rx="5" fill="#111"/>
+            <path d="M6 12h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M6 8h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+          <span class="brand-name">CFMall</span>
+        </a>
+      </div>
+
+      <div class="search-bar" role="search">
+        <label for="search" class="sr-only">Buscar productos</label>
+        <input id="search" type="search" placeholder="Buscar motos, repuestos, accesorios..." aria-label="Buscar productos" />
+        <button id="searchBtn" aria-label="Buscar">🔎</button>
+      </div>
+
+      <nav class="header-actions" aria-label="Acciones del usuario">
+        <button id="loginBtn" class="icon-btn" aria-haspopup="dialog" aria-controls="loginModal">👤<span class="vis">Iniciar sesión</span></button>
+        <button id="favoritesBtn" class="icon-btn" title="Favoritos">❤</button>
+        <button id="cartBtn" class="icon-btn" aria-haspopup="dialog" aria-controls="cartModal">
+          🛒 <span id="cartCount" class="cart-count" aria-live="polite">0</span>
+        </button>
+        <button id="menuBtn" class="icon-btn mobile-only" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </nav>
+    </div>
+
+    <!-- Navegación principal tipo Falabella -->
+    <nav id="mainNav" class="main-nav container" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Motos</a></li>
+        <li><a href="#">Repuestos</a></li>
+        <li><a href="#">Accesorios</a></li>
+        <li><a href="#">Financiamiento</a></li>
+        <li><a href="#">Servicios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / Sección principal estilo CFMoto -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-media" role="img" aria-label="Moto destacada">
+        <!-- ilustración placeholder (reemplazar por imagen real) -->
+        <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#0f172a"/>
+              <stop offset="1" stop-color="#0b4b5a"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#g)"/>
+          <g transform="translate(80,60)" fill="#fff" opacity="0.18">
+            <rect x="0" y="0" width="480" height="360" rx="12"></rect>
+          </g>
+          <text x="90" y="200" fill="white" font-size="46" font-weight="700">Potencia y diseño</text>
+          <text x="90" y="250" fill="white" font-size="20" opacity="0.9">La nueva X-Force 350 — conquista la ciudad y la pista</text>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <h1>Descubre la X-Force 350</h1>
+        <p>Rendimiento, estilo y financiamiento a tu medida. Disponible en colores limitados.</p>
+        <div class="hero-cta">
+          <a href="#producto-destacado" class="btn primary">Ver más</a>
+          <a href="#financiamiento" class="btn ghost">Financiamiento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner promocional -->
+  <section class="promo container" aria-label="Promociones">
+    <div class="promo-inner">
+      <p><strong>Promoción:</strong> 0% de interés en cuotas seleccionadas — hasta 12 meses. <a href="#financiamiento">Conoce más</a></p>
+    </div>
+  </section>
+
+  <!-- Sección de categorías (estilo Falabella) -->
+  <section class="categories container" aria-label="Categorías principales">
+    <h2>Categorías</h2>
+    <div class="cat-grid">
+      <a href="#" class="cat-card">
+        <div class="cat-image" aria-hidden="true">
+          <!-- placeholder circular -->
+          <svg width="120" height="80"><rect width="120" height="80" rx="8" fill="#f4f4f4"></rect></svg>
+        </div>
+        <span>Motos</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-image" aria-hidden="true"><svg width="120" height="80"><rect width="120" height="80" rx="8" fill="#f4f4f4"></rect></svg></div>
+        <span>Repuestos</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-image" aria-hidden="true"><svg width="120" height="80"><rect width="120" height="80" rx="8" fill="#f4f4f4"></rect></svg></div>
+        <span>Accesorios</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-image" aria-hidden="true"><svg width="120" height="80"><rect width="120" height="80" rx="8" fill="#f4f4f4"></rect></svg></div>
+        <span>Ropa y Casco</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Productos Destacados (cuadrícula estilo Falabella) -->
+  <section id="productos" class="products container" aria-label="Productos destacados">
+    <div class="section-head">
+      <h2>Productos Destacados</h2>
+      <div class="products-controls">
+        <label for="sort" class="sr-only">Ordenar</label>
+        <select id="sort" aria-label="Ordenar productos">
+          <option value="popular">Más populares</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productGrid" class="product-grid" aria-live="polite">
+      <!-- Productos inyectados por JS -->
+    </div>
+  </section>
+
+  <!-- Sección Producto destacado -->
+  <section id="producto-destacado" class="featured container" aria-label="Producto destacado">
+    <div class="featured-inner">
+      <div class="featured-media" aria-hidden="true">
+        <svg width="600" height="360"><rect width="600" height="360" rx="10" fill="#eef6fb"></rect></svg>
+      </div>
+      <div class="featured-copy">
+        <h3>X-Force 350 — Edición Especial</h3>
+        <p>Motor 350cc, ABS, panel digital, 2 años de garantía. Disponibilidad limitada.</p>
+        <ul>
+          <li>Entrega a domicilio</li>
+          <li>Prueba en ciudad disponible</li>
+          <li>Planes de financiamiento</li>
+        </ul>
+        <div>
+          <a class="btn primary" href="#productos" role="button">Ver modelos</a>
+          <a class="btn ghost" href="#financiamiento" role="button">Solicitar financiamiento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer combinado -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-cols">
+        <div class="col">
+          <h4>CFMall</h4>
+          <p>Dirección demo • Bogotá, Colombia</p>
+          <p>Tel: (1) 234 5678 • Email: contacto@cfmall.demo</p>
+        </div>
+        <div class="col">
+          <h4>Atención</h4>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Garantía</a></li>
+            <li><a href="#">Política de devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Formas de pago</h4>
+          <p>Aceptamos tarjetas, transferencias y financiamiento.</p>
+        </div>
+        <div class="col">
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; <span id="year"></span> CFMall — Demo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- MODALES: carrito y login -->
+  <dialog id="cartModal" class="modal" aria-label="Carrito de compras">
+    <form method="dialog" class="modal-inner">
+      <h3>Tu carrito</h3>
+      <div id="cartItems" class="cart-items">
+        <!-- items via JS -->
+      </div>
+      <div class="cart-footer">
+        <p>Total: <strong id="cartTotal">$0</strong></p>
+        <menu>
+          <button id="checkoutBtn" class="btn primary">Pagar</button>
+          <button id="closeCart" class="btn ghost">Cerrar</button>
+        </menu>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="loginModal" class="modal" aria-label="Iniciar sesión">
+    <form method="dialog" class="modal-inner">
+      <h3>Iniciar sesión</h3>
+      <label for="email">Correo</label>
+      <input id="email" type="email" placeholder="tucorreo@ejemplo.com" />
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" placeholder="••••••" />
+      <menu>
+        <button id="signin" class="btn primary">Entrar</button>
+        <button id="closeLogin" class="btn ghost">Cancelar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- NOTAS/SECCIÓN FINANCIAMIENTO (ancla) -->
+  <section id="financiamiento" class="container small-section">
+    <h2>Financiamiento</h2>
+    <p>Ofrecemos planes en cuotas fijas con entidades asociadas. Calcula tu cuota con nuestro asesor en la tienda.</p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>
